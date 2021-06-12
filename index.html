@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VR-281</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+</head>
+<body>
+	<a-scene>
+		<img id="img1" src="assets/bicicletas.jpg">
+		<img id="img2" src="assets/casa-rosa.jpg">
+		<img id="img3" src="assets/castillo-piedra.jpg">
+		<img id="img4" src="assets/museo.jpg">
+
+		<a-image src="#img2" position="-1.5 1.8 -3" onclick="show('img2')"></a-image>
+		<a-image src="#img4" position="0 1.8 -3" onclick="show('img4')"></a-image>
+		<a-image src="#img1" position="1.5 1.8 -3" onclick="show('img1')"></a-image>
+        <a-text position="0 1 -2" align="center" value="REALIDAD VIRTUAL 281" color="#0C00C2"></a-text>
+
+		<a-sky src="#img4" id="sky" ></a-sky>
+        <a-camera>
+            <a-cursor>
+
+            </a-cursor>
+        </a-camera>
+		
+	</a-scene>
+    <script>
+        function show(id){
+            document.getElementById('sky').setAttribute('src','#' + id)
+        }
+    </script>
+</body>
+</html>
